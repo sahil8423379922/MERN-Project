@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./CSS Modules/TodoCss.module.css";
+import TodoItem from "./TodoItem";
 
 export default function Todo({ todo }) {
   return (
@@ -24,14 +25,7 @@ export default function Todo({ todo }) {
             </thead>
             <tbody>
               {todo.map((value, index) => {
-                return (
-                  <tr>
-                    <td>{index + 1}</td>
-                    <td>{value.title}</td>
-                    <td>{value.desc}</td>
-                    <td>{value.remark}</td>
-                  </tr>
-                );
+                return <TodoItem value={value} index={index} />;
               })}
             </tbody>
           </table>
