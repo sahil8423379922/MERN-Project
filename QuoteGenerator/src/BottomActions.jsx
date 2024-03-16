@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Col, Row, Table } from "react-bootstrap";
 import style from "./CSS/Quote.module.css";
 
-export default function BottomActions() {
+export default function BottomActions({ h }) {
   return (
     <Table style={{ marginTop: "2rem" }}>
       <Row>
@@ -46,7 +46,9 @@ export default function BottomActions() {
         </Col>
         <Col xs={4}></Col>
         <Col xs={4}>
-          <Button variant="outline-primary">New Quote</Button>{" "}
+          <Button onClick={h} variant="outline-primary">
+            New Quote
+          </Button>{" "}
         </Col>
       </Row>
     </Table>
